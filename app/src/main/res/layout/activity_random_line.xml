@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomLine">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="隨機祝賀話!"
+            android:textColor="#AE0000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:gravity="center"
+            android:text="新年快樂!"
+            android:textSize="30sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_random"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="輩分大" />
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="四字成語" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_random"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="隨機!" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
