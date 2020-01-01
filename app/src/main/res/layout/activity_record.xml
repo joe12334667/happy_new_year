@@ -11,20 +11,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <ScrollView
-            android:id="@+id/contencrollView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:id="@+id/contencrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+
+
                 <lecho.lib.hellocharts.view.PieChartView
                     android:id="@+id/chart"
                     android:layout_width="match_parent"
                     android:layout_height="462dp" />
+
 
                 <TextView
                     android:id="@+id/tv_show"
@@ -38,6 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="取消所有紀錄!"
                     android:textColor="#AC0000" />
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

@@ -77,7 +77,7 @@ public class record extends AppCompatActivity {
                                                                                 rnd.nextInt(256),
                                                                                 rnd.nextInt(256),
                                                                                 rnd.nextInt(256)) )
-                .setLabel(c.getString(2)+ ":" +  (int)m  ));
+                .setLabel(c.getString(2)+ ":" +  (int)m +"元" ));
 
             }while (c.moveToNext());
 

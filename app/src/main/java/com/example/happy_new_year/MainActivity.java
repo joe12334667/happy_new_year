@@ -21,6 +21,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_show;
@@ -91,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "請輸入金額!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if ( isNumeric(et_money.getText().toString())) {
+                    Toast.makeText(MainActivity.this, "請勿輸入小數!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (actv_family.getText().toString().isEmpty() && rg_family.getCheckedRadioButtonId() == -1) {
 
                     Toast.makeText(MainActivity.this, "請輸入或選取親戚!", Toast.LENGTH_SHORT).show();
@@ -210,7 +218,19 @@ public class MainActivity extends AppCompatActivity {
         }
         return "no data";
     }
-    public void FindRes(){
+
+
+    public boolean isNumeric(String str) {
+        Pattern pattern = Pattern.compile("[0-9]+");
+        Matcher isNum = pattern.matcher(str);
+        if (isNum.matches()) {
+            return false;
+        }
+        return true;
+    }
+
+
+        public void FindRes(){
         et_money = findViewById(R.id.et_money);
         tv_show = findViewById(R.id.tv_show);
         actv_family = findViewById(R.id.actv_family);
